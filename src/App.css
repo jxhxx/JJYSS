@@ -2,6 +2,26 @@
   text-align: center;
 }
 
+.title-nav {
+  display: block;
+  width: 100;
+  color: black;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.modal {
+  display: flex;
+  padding-top: 30px;
+}
+
+.bordering {
+  border-top-style: ridge;
+  border-bottom-style: ridge;
+  border-left-style: ridge;
+  border-right-style: ridge;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +56,4 @@
     transform: rotate(360deg);
   }
 }
+
