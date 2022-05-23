@@ -25,6 +25,6 @@
 ![KakaoTalk_20220426_174111478](https://user-images.githubusercontent.com/86606660/165448512-ab998d8a-49a5-4202-a60a-d9910bea942a.jpg)
 
 ***
-> [실습사이트 링크] https://github.com/justinpark/justin-do-it-react.git 
+> [실습사이트 링크] https://github.com/justinpark/justin-do-it-react.git    
 > [BMI참고사이트 링크] https://github.com/GermaVinsmoke/bmi-calculator
 
