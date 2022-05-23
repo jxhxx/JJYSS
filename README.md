@@ -28,6 +28,3 @@
 > [실습사이트 링크] https://github.com/justinpark/justin-do-it-react.git 
 > [BMI참고사이트 링크] https://github.com/GermaVinsmoke/bmi-calculator
 
-
-
->>>>>>> 4c6ed58591c1304e7dec3940e5590fd0dbdc66b7
