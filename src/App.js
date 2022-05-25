@@ -22,6 +22,7 @@ const Modal = () => {
   return (
     <div className="modal">
           <p>testetestst</p>
+          <p>testetestst22222222</p>
           </div>
   )
 }
