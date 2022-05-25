@@ -1,5 +1,3 @@
-// main Branch
-// develop Branch
 import logo from './logo.svg';
 import './App.css';
 
