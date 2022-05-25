@@ -1,14 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+// App Components
+import InfoComponent from './components/InfoComponent';
 
 function App() {
   return (
-    <div className="App">
-      <div className="title-nav">
-        <h1>건강 지킴이</h1>
+    <div className="app">
+      <div className="container">
+        <div className="title-nav">
+          <h1>건강 지킴이</h1>
         </div>
-
-    <Modal />
+        
+      <InfoComponent />
+      </div>
     </div>
     
   );
