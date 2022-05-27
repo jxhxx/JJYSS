@@ -1,25 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../App.js'
+import '../App.css';
+import CalResultComponent from './CalResultComponent';
 
 class InfoComponent extends React.Component{
+
     render(){
         return(
             <div className="info-form">
-                <form onSubmit="0">
-                    <div>
-                        <label>▶ 나이</label>
+                    <form onSubmit="0">
+                    <br />
+                    <p />
+                        <label>▶ 성별 &nbsp;</label>
+                        <input type="radio" id="gender" name="gender"
+                            value="female" checked="true" onChange="">
+                            </input>
+                        여성     
+                        &nbsp;
+                        <input type="radio" id="gender" name="gender"
+                            value="male" onChange="">
+                             </input>
+                        남성
+                    <img src="images/turtle.png" alt="" align="right"
+                        width="200px" height="200px" />
+
+                    <p />
+                        <label>▶ 나이 &nbsp;</label>
                         <input value="0" />
-                    </div>
-                    <div>
-                        <label>▶ 신장</label>
+                    <p />
+                        <label>▶ 신장 &nbsp;</label>
                         <input value="0" />
-                    </div>
-                    <div>
-                        <label>▶ 체중</label>
+                    <p />
+                        <label>▶ 체중 &nbsp;</label>
                         <input value="0" />
-                    </div>
-                    <div>
-                        <button className='btn' type='submit'>결과보기</button>
-                    </div>
+                    <p />
+                        
                 </form>
             </div>
         );
