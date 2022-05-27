@@ -26,7 +26,7 @@ let [resultUI, setResultUI] = useState(false);
          >결과보기</button>
     </div>
       {
-        resultUI == true ? <CalResultComponent /> : null
+        resultUI === true ? <CalResultComponent /> : null
       }
 
       </div>
