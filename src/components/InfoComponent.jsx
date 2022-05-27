@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import '../App.js'
 import '../App.css';
-import CalResultComponent from './CalResultComponent';
 
 class InfoComponent extends React.Component{
-
     render(){
         return(
             <div className="info-form">
@@ -34,7 +32,6 @@ class InfoComponent extends React.Component{
                         <label>▶ 체중 &nbsp;</label>
                         <input value="0" />
                     <p />
-                        
                 </form>
             </div>
         );

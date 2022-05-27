@@ -3,12 +3,9 @@ import './App.css';
 
 // App Components
 import InfoComponent from './components/InfoComponent';
-import CalResultComponent from './components/CalResultComponent';
+import ResultButtonComponent from './components/ResultButtonComponent';
 
 function App() {
-// // 결과 표시 UI의 상태를 state로 저장
-let [resultUI, setResultUI] = useState(false);
-
   return (
     <div className="app">
       <div className="container">
@@ -19,15 +16,7 @@ let [resultUI, setResultUI] = useState(false);
 
         <br /> <br />
       <InfoComponent />    
-    
-    <div>
-      <br />
-      <button className="resultBtn" onClick={ () => {setResultUI(!resultUI)}}
-         >결과보기</button>
-    </div>
-      {
-        resultUI == true ? <CalResultComponent /> : null
-      }
+      <ResultButtonComponent />
 
       </div>
     </div>
