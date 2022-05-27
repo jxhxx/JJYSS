@@ -17,7 +17,6 @@ function App() {
         <br /> <br />
       <InfoComponent />    
       <ResultButtonComponent />
-
       </div>
     </div>
     
