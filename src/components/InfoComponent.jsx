@@ -15,6 +15,7 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender }) => {
 
   return (
     <div className="info-form">
+      <div className="info-form-R">
       <form>
         <br />
         <p />
@@ -39,14 +40,17 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender }) => {
           value="male"
         ></input>
         남성
+
         <img
           src="images/bmibmr.jpeg"
           alt=""
           align="right"
-          width="500px"
+          width="400px"
           position-="200"
           // height="200px"
         />
+
+        
         <p />
         <label>▶ 나이 &nbsp;</label>
         <input onChange={onChangeAge} placeholder="0" />
@@ -57,7 +61,8 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender }) => {
         <label>▶ 체중 &nbsp;</label>
         <input onChange={onChangeWeight} placeholder="0" />
         <p />
-      </form>
+        
+      </form></div>
     </div>
   );
 };

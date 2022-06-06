@@ -37,7 +37,6 @@ function App() {
         <div className="title-nav">
           <h1>건강 지킴이</h1>
         </div>
-        <br /> <br />
         <InfoComponent
           setGender={setGender}
           setAge={setAge}
@@ -61,10 +60,6 @@ function App() {
       <br />
       <br />
       <br />
-
-
-
-      
 
       {/* 결과컴포넌트 on/off */}
       {resultUI ? <Modal /> : null}
