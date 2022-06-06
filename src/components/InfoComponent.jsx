@@ -1,45 +1,65 @@
-import React, { useState } from 'react';
-import '../App.js'
-import '../App.css';
-import CalResultComponent from './CalResultComponent';
+import React, { useEffect, useState } from "react";
+import "../App.js";
+import "../App.css";
 
-class InfoComponent extends React.Component{
+const InfoComponent = ({ setAge, setHeight, setWeight, setGender }) => {
+  const onChangeAge = (e) => {
+    setAge(e.target.value);
+  };
+  const onChangeHeight = (e) => {
+    setHeight(e.target.value);
+  };
+  const onChangeWeight = (e) => {
+    setWeight(e.target.value);
+  };
 
-    render(){
-        return(
-            <div className="info-form">
-                    <form onSubmit="0">
-                    <br />
-                    <p />
-                        <label>▶ 성별 &nbsp;</label>
-                        <input type="radio" id="gender" name="gender"
-                            value="female" checked="true" onChange="">
-                            </input>
-                        여성     
-                        &nbsp;
-                        <input type="radio" id="gender" name="gender"
-                            value="male" onChange="">
-                             </input>
-                        남성
-                    <img src="images/turtle.png" alt="" align="right"
-                        width="200px" height="200px" />
-
-                    <p />
-                        <label>▶ 나이 &nbsp;</label>
-                        <input value="0" />
-                    <p />
-                        <label>▶ 신장 &nbsp;</label>
-                        <input value="0" />
-                    <p />
-                        <label>▶ 체중 &nbsp;</label>
-                        <input value="0" />
-                    <p />
-                        
-                </form>
-            </div>
-        );
-        
-    }
-}
+  return (
+    <div className="info-form">
+      <form>
+        <br />
+        <p />
+        <label>▶ 성별 &nbsp;</label>
+        <input
+          onClick={() => {
+            setGender(false);
+          }}
+          type="radio"
+          id="gender"
+          name="gender"
+          value="female"
+        ></input>
+        여성 &nbsp;
+        <input
+          onClick={() => {
+            setGender(true);
+          }}
+          type="radio"
+          id="gender"
+          name="gender"
+          value="male"
+        ></input>
+        남성
+        <img
+          src="images/bmibmr.jpeg"
+          alt=""
+          align="right"
+          width="500px"
+          position-="200"
+          // height="200px"
+        />
+        <p />
+        <label>▶ 나이 &nbsp;</label>
+        <input onChange={onChangeAge} placeholder="0" />
+        <p />
+        <label>▶ 신장 &nbsp;</label>
+        <input onChange={onChangeHeight} placeholder="0" />
+        <p />
+        <label>▶ 체중 &nbsp;</label>
+        <input onChange={onChangeWeight} placeholder="0" />
+        <p />
+      </form>
+    </div>
+  );
+};
 
 export default InfoComponent;
