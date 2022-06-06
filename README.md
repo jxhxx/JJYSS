@@ -30,8 +30,8 @@
 
 ***
 
-##Install   
+## Install   
 `yarn add @nivo/core @nivo/bullet`
 
-##Usage   
+## Usage   
 `yarn start`
