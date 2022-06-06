@@ -46,15 +46,17 @@ function App() {
         <div className="result-view">
           <br />
           {/* 버튼 클릭 시 결과 UI가 열리고 닫힘 */}
+          <div>
           <button
             className="resultBtn"
             onClick={() => {
               setResultUI(!resultUI);
             }}
           >
-
+          
             결과보기
           </button>
+          </div>
         </div>
       </div>
       <br />

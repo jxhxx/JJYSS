@@ -39,6 +39,17 @@
   text-align: center;
 }
 
+.info-form{
+  
+  display:flex; 
+  padding:20px;
+  justify-content  :space-between;
+  
+}
+
+
+
+
 .cal-result {
   margin-top: auto;
   padding: 20px;
