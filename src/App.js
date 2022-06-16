@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
+//import axios from "axios";
 
 // App Components
 import InfoComponent from "./components/InfoComponent";
@@ -47,13 +47,7 @@ function App() {
           <br />
           {/* 버튼 클릭 시 결과 UI가 열리고 닫힘 */}
           <div>
-          <button
-            className="resultBtn"
-            onClick={() => {
-              setResultUI(!resultUI);
-            }}
-          >
-          
+          <button className="resultBtn" onClick={() => {setResultUI(!resultUI); }}>
             결과보기
           </button>
           </div>
