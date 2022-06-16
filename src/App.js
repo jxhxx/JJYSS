@@ -6,7 +6,6 @@ import "./App.css";
 import InfoComponent from "./components/InfoComponent";
 import ResultButtonComponent from "./components/ResultButtonComponent";
 import CalResultComponent from "./components/CalResultComponent";
-import BmiGauge from "./components/BmiGauge"
 
 function App() {
   const [resultUI, setResultUI] = useState(false);

@@ -11,7 +11,7 @@
 }
 
 .container {
-  width: 60%;
+  width: 900px;
   border-width: 10px;
   border: 20px solid;
   border-radius: 10px;
@@ -20,7 +20,7 @@
   font-family: "BMDOHYEON_otf";
 }
 .resualt-container {
-  width: 60%;
+  width: 900px;
   border-width: 10px;
   border: 20px solid;
   border-radius: 10px;
@@ -43,11 +43,15 @@
   
   display:flex; 
   padding:20px;
-  justify-content  :space-between;
+  justify-content:space-between;
+  align-content: center;
   
 }
 
-
+.info-form-L{
+  
+  align-content: center;
+}
 
 
 .cal-result {
