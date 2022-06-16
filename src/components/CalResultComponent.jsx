@@ -29,9 +29,9 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
   
   useEffect(() => {
     if (gender === true) { // 남자 기초대사량 산출
-      setState(66 + 13.8 * weight + 5 * height + 6.8 * age);
+      setState(66.47 + 13.75 * weight + 5 * height - 6.76 * age);
     } else {  // 여자 기초대사량 산출
-      setState(655 + 9.6 * weight + 1.8 * height + 4.7 * age);
+      setState(655.1 + 9.56 * weight + 1.85 * height - 4.68 * age);
     }
     setBmi(bmi.toFixed(2));
     Gradetest();
