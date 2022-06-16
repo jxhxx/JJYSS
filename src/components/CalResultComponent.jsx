@@ -21,7 +21,7 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
     } else if (cpBmi >= 25 && cpBmi < 30) {
       setGrade("1단계 비만");
     } else if (cpBmi >= 30 && cpBmi < 35) {
-      setGrade("1단계 비만");
+      setGrade("2단계 비만");
     } else if (cpBmi >= 35) {
       setGrade("3단계 비만");
     }
