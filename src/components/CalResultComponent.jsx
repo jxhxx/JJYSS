@@ -12,27 +12,32 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
   const Gradetest = () => {
     const cpBmi = bmi;
     Math.floor(cpBmi);
-    if (cpBmi > 18 && cpBmi < 23) {
+    if (cpBmi >= 18.5 && cpBmi < 23) {
       setGrade("정상");
-    } else if (cpBmi < 18) {
+    } else if (cpBmi < 18.5) {
       setGrade("저체중");
-    } else if (cpBmi > 23) {
-      setGrade("경도비만");
-    } else if (cpBmi > 30) {
-      setGrade("중도비만");
+    } else if (cpBmi >= 23 && cpBmi < 25) {
+      setGrade("과체중");
+    } else if (cpBmi >= 25 && cpBmi < 30) {
+      setGrade("1단계 비만");
+    } else if (cpBmi >= 30 && cpBmi < 35) {
+      setGrade("2단계 비만");
+    } else if (cpBmi >= 35) {
+      setGrade("3단계 비만");
     }
   };
   
   useEffect(() => {
-    if (gender === true) {
-      setState(66 + 13.8 * weight + 5 * height + 6.8 * age);
-    } else {
-      setState(655 + 9.6 * weight + 1.8 * height + 4.7 * age);
+    if (gender === true) { // 남자 기초대사량 산출
+      setState(66.47 + 13.75 * weight + 5 * height - 6.76 * age);
+    } else {  // 여자 기초대사량 산출
+      setState(655.1 + 9.56 * weight + 1.85 * height - 4.68 * age);
     }
     setBmi(bmi.toFixed(2));
     Gradetest();
   }, []);
 
+  //. 산출결과 띄우기
   return (
     <div className="resualt-container">
       <div className="title-nav">
