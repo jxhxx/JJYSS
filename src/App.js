@@ -42,15 +42,12 @@ function App() {
     // 숫자 정규식
     const numPattern = /[0-9]/g;
 
-    // 항목의 값이 공백이거나 숫자 정규식이 아닌 경우
-    if (age, height, weight === '' || 
+    // 각 항목의 값이 공백 or 0보다 작거나 같음 or 숫자 정규식이 아닌 경우
+    if (age, height, weight === '' || age, height, weight <= 0 ||
       !numPattern.test(age, height, weight)) {
       alert("유효한 값을 입력해주세요.");
-    } // 항목의 값이 1보다 작은 수거나 숫자 정규식이 아닌 경우
-    else if (age, height, weight < 1 ||
-      !numPattern.test(age, height, weight)) {
-        alert("유효한 값을 입력해주세요."); 
-    } // 위 조건에 해당되지 않으면 resultUI의 상태를 전환할 수 있음
+    } 
+    // 위 조건에 해당되지 않으면 resultUI의 상태를 전환 함
     else {
       setResultUI(!resultUI);
     }
