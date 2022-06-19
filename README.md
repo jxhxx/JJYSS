@@ -19,7 +19,7 @@
 
 ### 프로젝트 주제
 건강 관리 사이트
-1. 기초대사량
+1. 기초대사량 (BMR)
 2. BMI
 
 ![KakaoTalk_20220426_174111478](https://user-images.githubusercontent.com/86606660/165448512-ab998d8a-49a5-4202-a60a-d9910bea942a.jpg)
