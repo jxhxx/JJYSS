@@ -26,12 +26,13 @@
 |BmiGauge|<결과UI> BMI 게이지 출력|
    
 ***
- 
-# 초기 디자인
-![KakaoTalk_20220426_174111478](https://user-images.githubusercontent.com/86606660/165448512-ab998d8a-49a5-4202-a60a-d9910bea942a.jpg)
    
 # 최종 디자인
 ![최종디자인](https://user-images.githubusercontent.com/72649564/174496876-eda41a38-b0ee-4963-91ef-f869f1222627.png)
+   
+# 초기 디자인
+![KakaoTalk_20220426_174111478](https://user-images.githubusercontent.com/86606660/165448512-ab998d8a-49a5-4202-a60a-d9910bea942a.jpg)
+
 
 ***
 
