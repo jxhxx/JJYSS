@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-//import axios from "axios";
 
 // App Components
 import InfoComponent from "./components/InfoComponent";
-import ResultButtonComponent from "./components/ResultButtonComponent";
 import CalResultComponent from "./components/CalResultComponent";
-import { toBeChecked } from "@testing-library/jest-dom/dist/matchers";
 
 function App() {
+  // 결과UI 상태값 담을 변수 선언
   const [resultUI, setResultUI] = useState(false);
 
-  // 나이, 신장, 체중 
+  // 성별, 나이, 신장, 체중 값 담을 변수 선언
   const [gender, setGender] = useState(false);
   const [age, setAge] = useState('');
   const [height, setHeight] = useState(''); 
@@ -30,7 +28,8 @@ function App() {
 
   useEffect(() => {
     console.log([age, height, weight, gender]);
-    console.log(typeof(age));console.log(typeof(height));
+    console.log(typeof(age));
+    console.log(typeof(height));
     console.log(typeof(weight));
   }, [age, height, weight, gender]);
 
