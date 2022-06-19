@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
 
 // App Components
 import InfoComponent from "./components/InfoComponent";
@@ -25,14 +24,6 @@ function App() {
       />
     );
   }
-
-  useEffect(() => {
-    console.log([age, height, weight, gender]);
-    console.log(typeof(age));
-    console.log(typeof(height));
-    console.log(typeof(weight));
-  }, [age, height, weight, gender]);
-
 
   // 유효성 체크 함수
   const NumberCheck = () => {
@@ -60,6 +51,7 @@ function App() {
         <div className="title-nav">
           <h1>건강 지킴이</h1>
         </div>
+        {/* 정보 입력 부분*/}
         <InfoComponent
           setGender={setGender}
           setAge={setAge}
@@ -71,8 +63,7 @@ function App() {
           {/* 버튼 클릭 시 결과 UI가 열리고 닫힘 */}
           <div>
           <button className="resultBtn" onClick={() => { 
-          NumberCheck(); 
-           // setResultUI(!resultUI);  
+              NumberCheck(); 
             }}>
             결과보기
           </button>
@@ -83,10 +74,10 @@ function App() {
       <br />
       <br />
       
-      
-      {/* 결과컴포넌트 on/off */}
+      {/* 결과UI (on/off) */}
       {resultUI ? <Modal /> : null}
     </div>
+    
   );
 }
 

@@ -1,8 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
-import "../App.js";
+import React from "react";
 import "../App.css";
-import axios from "axios";
-import { render } from "@testing-library/react";
 
 const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
 
@@ -20,10 +17,9 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
 
   return (
     <div className="info-form">
-
+      
+      {/* 정보 입력 */}
       <div className="info-form-L">
-
-        
         <br />
         <p />
         <div>
@@ -69,20 +65,17 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
             onChange={onChangeWeight} placeholder="" />
         </div>
         <p />
-        
-      
       </div>
 
+      {/* BMI BMR 산출식 이미지 */}
       <div className="info-form-R">
         <img
             src="images/bmibmr.jpeg"
             alt=""
             align="center"
-            //width="500px"
             width="100%"
             max-width="500px"
             position-="200"
-            // height="200px"
           />
       </div>
     </div>

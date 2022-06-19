@@ -1,8 +1,5 @@
 import { ResponsiveBullet } from '@nivo/bullet';
-import BmiComponents from './bmiComponent';
-import CalResultComponent from './CalResultComponent';
 import {data} from '../data';
-
 
 const BmiGauge = (props) => {
 
@@ -26,6 +23,5 @@ const BmiGauge = (props) => {
         </div>
     )
 }
-
 
 export default BmiGauge;
