@@ -25,6 +25,8 @@
 |BmiComponent|<결과UI> BMI 결과 출력|
 |BmiGauge|<결과UI> BMI 게이지 출력|
    
+***
+ 
 # 초기 디자인
 ![KakaoTalk_20220426_174111478](https://user-images.githubusercontent.com/86606660/165448512-ab998d8a-49a5-4202-a60a-d9910bea942a.jpg)
    
