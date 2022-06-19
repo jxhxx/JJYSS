@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import "../App.js";
 import "../App.css";
 import axios from "axios";
+import { render } from "@testing-library/react";
 
 const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
 
@@ -52,19 +53,19 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
         <p />
         <div>
           <label>▶ 나이 &nbsp;</label>
-          <input type="text" 
+          <input type="number" 
             onChange={onChangeAge} placeholder="" />
         </div>
         <p />
         <div>
           <label>▶ 신장 &nbsp;</label>
-          <input type="text"
+          <input type="number"
             onChange={onChangeHeight} placeholder="" />
         </div>
         <p />
         <div>
           <label>▶ 체중 &nbsp;</label>
-          <input type="text" 
+          <input type="number" 
             onChange={onChangeWeight} placeholder="" />
         </div>
         <p />

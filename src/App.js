@@ -32,22 +32,24 @@ function App() {
     console.log([age, height, weight, gender]);
     console.log(typeof(age));console.log(typeof(height));
     console.log(typeof(weight));
-    console.log(isNaN(age));
   }, [age, height, weight, gender]);
 
 
   // 유효성 체크 함수
   const NumberCheck = () => {
+    // 숫자가 아닌 모든 문자를 판별하는 정규식
+    const notNumPattern = /[^0-9]/g;
 
-    // 숫자 정규식
-    const numPattern = /[0-9]/g;
-
-    // 각 항목의 값이 공백 or 0보다 작거나 같음 or 숫자 정규식이 아닌 경우
-    if (age, height, weight === '' || age, height, weight <= 0 ||
-      !numPattern.test(age, height, weight)) {
+    // 각 항목의 값이 공백 or 0보다 작거나 같음 or 숫자가 아닌 문자이면 경고창 띄움
+    if (age === '' || age <= 0 || notNumPattern.test(age)) {
       alert("유효한 값을 입력해주세요.");
-    } 
-    // 위 조건에 해당되지 않으면 resultUI의 상태를 전환 함
+    }
+    else if (height === '' || height <= 0 || notNumPattern.test(height)) {
+      alert("유효한 값을 입력해주세요.");
+    }
+    else if (weight === '' || weight <= 0 || notNumPattern.test(weight)) {
+      alert("유효한 값을 입력해주세요.");
+    }
     else {
       setResultUI(!resultUI);
     }
@@ -70,7 +72,7 @@ function App() {
           {/* 버튼 클릭 시 결과 UI가 열리고 닫힘 */}
           <div>
           <button className="resultBtn" onClick={() => { 
-            NumberCheck(); 
+          NumberCheck(); 
            // setResultUI(!resultUI);  
             }}>
             결과보기
@@ -81,7 +83,8 @@ function App() {
       <br />
       <br />
       <br />
-
+      
+      
       {/* 결과컴포넌트 on/off */}
       {resultUI ? <Modal /> : null}
     </div>
