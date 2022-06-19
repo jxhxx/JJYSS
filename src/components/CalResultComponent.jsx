@@ -32,7 +32,7 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
      // 숫자가 아닌 모든 문자를 판별하는 정규식
      const notNumPattern = /[^0-9]/g;
 
-     // 필드 값을 재입력 할 때, 값이 공백 or 0보다 작거나 or 숫자가 아닐 경우
+     // 필드 값을 재입력 할 때, 값이 공백 or 0보다 작거나 or 숫자가 아닐 경우 새로고침
      if (age === '' || age <= 0 || notNumPattern.test(age)) {
        window.location.replace("/"); 
      }
