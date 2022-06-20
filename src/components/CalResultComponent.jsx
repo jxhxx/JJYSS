@@ -33,20 +33,21 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
 
   useEffect(() => {
 
-     // 숫자가 아닌 모든 문자를 판별하는 정규식
-     const notNumPattern = /[^0-9]/g;
+     // 정수 3자리, 소수점 2자리 제한하는 정규식
+    const pattern = /^(\d{0,3})([.]\d{0,2}?)?$/;
 
-     // 필드 값을 재입력 할 때, 값이 공백 or 0보다 작거나 or 숫자가 아닐 경우 새로고침
-     if (age === '' || age <= 0 || notNumPattern.test(age)) {
-       window.location.replace("/"); 
-     }
-     else if (height === '' || height <= 0 || notNumPattern.test(height)) {
-      window.location.replace("/"); 
-     }
-     else if (weight === '' || weight <= 0 || notNumPattern.test(weight)) {
-      window.location.replace("/"); 
-     }
-    
+     // 산출 결과 활성화 상태에서 필드 값 재입력 하는 경우, 
+     // 나이/신장/체중 중  두 개 이상의 필드 값 미입력 시 새로고침
+    if ((age <= 0 && height <= 0) || (age <= 0 && weight <= 0)
+          || (height <= 0 && weight <= 0)) {
+      window.location.replace("/");
+    }
+    // 소수점 정규식에 해당하지 않는 문자를 입력받으면 새로고침
+    else if (!pattern.test(age) || !pattern.test(height) ||
+           !pattern.test(weight)) {
+      window.location.replace("/");
+    }
+
      // 정상 값 입력
     else {
       if (gender === 'male') { // 남자 기초대사량 산출
@@ -67,15 +68,26 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
         <h1>산출결과</h1>
       </div>
       <div className="cal-result">
-        <br />
-        {/* BMR 컴포넌트*/}
+        <div className="bmr-result">
+          {/* BMR 컴포넌트*/}
         <BmrComponent state={state} />
-        
-        {/* BMI 컴포넌트*/}
+        <img
+            src="images/bmr.png"
+            alt=""
+            align="center"
+            width="100%"
+            max-width="500px"
+            position-="200"
+          />
+        </div>
+        <br />
+        <div className="bmi-result">
+           {/* BMI 컴포넌트*/}
         <BmiComponents bmi={bmi} grade={grade} />
 
         {/* BMI 게이지 컴포넌트*/}
         <BmiGauge bmi={bmi} />
+        </div>
       </div>
 
     </div>

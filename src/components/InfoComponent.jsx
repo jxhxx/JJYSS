@@ -22,8 +22,8 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
       <div className="info-form-L">
         <br />
         <p />
-        <div>
-        <label>▶ 성별 &nbsp;</label>
+        <div className="genderInput">
+        <label>✔︎ &nbsp;성별 &nbsp; </label>
         <input
           onChange={(e) => {
             setGender(e.target.value);
@@ -32,7 +32,7 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
           id="gender"
           name="gender"
           value="female"
-          defaultChecked="checked"
+          defaultChecked="checked"ㅇ
         ></input>
         여성 &nbsp;
         <input
@@ -44,25 +44,26 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
           name="gender"
           value="male"
         ></input>
+        &nbsp;
         남성
         </div>
+        <br />
+        <div className="ageInput">
+          <label>✔︎ &nbsp;나이 &nbsp;&nbsp;</label>
+          <input type="text" maxLength="6"
+            onChange={onChangeAge} placeholder="" />&nbsp;세(만)
+        </div> 
         <p />
-        <div>
-          <label>▶ 나이 &nbsp;</label>
-          <input type="number" 
-            onChange={onChangeAge} placeholder="" />
+        <div className="heightInput">
+          <label>✔︎ &nbsp;신장 &nbsp;&nbsp;</label>
+          <input type="text" maxLength="6" 
+            onChange={onChangeHeight} placeholder="" />&nbsp;cm
         </div>
         <p />
-        <div>
-          <label>▶ 신장 &nbsp;</label>
-          <input type="number"
-            onChange={onChangeHeight} placeholder="" />
-        </div>
-        <p />
-        <div>
-          <label>▶ 체중 &nbsp;</label>
-          <input type="number" 
-            onChange={onChangeWeight} placeholder="" />
+        <div className="weightInput">
+          <label>✔︎ &nbsp;체중 &nbsp;&nbsp;</label>
+          <input type="text" maxLength="6"
+            onChange={onChangeWeight} placeholder="" />&nbsp;kg
         </div>
         <p />
       </div>
@@ -75,7 +76,7 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
             align="center"
             width="100%"
             max-width="500px"
-            position-="200"
+            position="200"
           />
       </div>
     </div>

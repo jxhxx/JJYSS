@@ -11,7 +11,7 @@
 }
 
 .container {
-  width: 900px;
+  width: 950px;
   border-width: 10px;
   border: 20px solid;
   border-radius: 10px;
@@ -21,7 +21,7 @@
 }
 
 .resualt-container {
-  width: 900px;
+  width: 950px;
   border-width: 10px;
   border: 20px solid;
   border-radius: 10px;
@@ -33,42 +33,116 @@
 .title-nav {
   display: block;
   width: 100%;
-  height: 80px;
-  color: black;
-  padding-top:3px;
+  height: 150px;
+  color: darkslategrey;
+  padding-top:4px;
+  
+  font-size: large;
   text-align: center;
+}
+
+span {
+  color: darkslategrey;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+p {
+  font-size: 1.18rem;
+  text-align: center;
+  color: #392f31;
 }
 
 .info-form{
   display:flex; 
-  padding:20px;
-  justify-content:space-between;
+  padding:45px;
+  justify-content: space-between;
   align-content: center;
 }
 
 .info-form-L{
+  vertical-align: super;
   align-content: center;
+  font-size: 1rem;
+  margin-top: -19px;
 }
 
+.genderInput {
+  transform: translate(-8px);
+}
+
+.heightInput {
+  transform: translate(-8px);
+}
+
+.weightInput {
+  transform: translate(-11px);
+}
+
+input[type=text] {
+  width: 80px;
+  height: 40px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  padding-left: 10px;
+  vertical-align: middle;
+  
+  background-color: whitesmoke;
+}
 
 .cal-result {
   margin-top: auto;
   padding: 20px;
-  background: #eee;
+  
   text-align: center;
+}
+
+.bmr-result {
+  background-color: #ffdc45;
+  width: 80.7%;
+  height: 450px;
+  padding: 1.5rem 5.5rem;
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 0.6rem;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 30px;
+}
+
+.bmi-result {
+  background-color: #ffdc45;
+  width: 80.7%;
+  height: 300px;
+  padding: 1.5rem 5.5rem;
+  padding-top: 4rem;
+  border-radius: 0.6rem;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 30px;
 }
 
 .resultBtn {
   color: white;
   background: #B2B2B2;
   width: 70%;
-  height: 80px;
+  height: 90px;
   padding: 0.375rem 0.75rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
   border: 1px solid;
   border-radius: 0.55rem;
   font-size: 2.5rem;
   line-height: 1.5;
   font-family: "BMDOHYEON_otf";
+}
+
+.resultBtn:hover {
+  background-color: #008d62;
+  color: whitesmoke;
+  border: none;
 }
 
 .App-logo {
