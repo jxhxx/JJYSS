@@ -50,7 +50,7 @@ span {
 p {
   font-size: 1.18rem;
   text-align: center;
-  color: #343b61;
+  color: #392f31;
 }
 
 .info-form{
@@ -64,6 +64,7 @@ p {
   vertical-align: super;
   align-content: center;
   font-size: 1rem;
+  margin-top: -19px;
 }
 
 .genderInput {
@@ -99,7 +100,7 @@ input[type=text] {
 }
 
 .bmr-result {
-  background-color: #ffea00;
+  background-color: #ffdc45;
   width: 80.7%;
   height: 450px;
   padding: 1.5rem 5.5rem;
@@ -112,7 +113,7 @@ input[type=text] {
 }
 
 .bmi-result {
-  background-color: #ffea00;
+  background-color: #ffdc45;
   width: 80.7%;
   height: 300px;
   padding: 1.5rem 5.5rem;

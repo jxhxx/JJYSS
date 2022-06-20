@@ -50,7 +50,7 @@ const CalResultComponent = ({ age, height, weight, gender }) => {
 
      // 정상 값 입력
     else {
-      if (gender === true) { // 남자 기초대사량 산출
+      if (gender === 'male') { // 남자 기초대사량 산출
         setState(66.47 + 13.75 * weight + 5 * height - 6.76 * age);
       } 
       else {  // 여자 기초대사량 산출

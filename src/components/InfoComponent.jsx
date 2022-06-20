@@ -32,7 +32,7 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
           id="gender"
           name="gender"
           value="female"
-          checked="checked"
+          defaultChecked="checked"
         ></input>
         여성 &nbsp;
         <input
