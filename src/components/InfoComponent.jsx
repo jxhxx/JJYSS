@@ -25,19 +25,19 @@ const InfoComponent = ({ setAge, setHeight, setWeight, setGender}) => {
         <div className="genderInput">
         <label>✔︎ &nbsp;성별 &nbsp; </label>
         <input
-          onChange={() => {
-            setGender(false);
+          onChange={(e) => {
+            setGender(e.target.value);
           }}
           type="radio"
           id="gender"
           name="gender"
           value="female"
-          defaultChecked="checked"
+          defaultChecked="checked"ㅇ
         ></input>
         여성 &nbsp;
         <input
-          onChange={() => {
-            setGender(true);
+          onChange={(e) => {
+            setGender(e.target.value);
           }}
           type="radio"
           id="gender"

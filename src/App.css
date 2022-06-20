@@ -139,6 +139,12 @@ input[type=text] {
   font-family: "BMDOHYEON_otf";
 }
 
+.resultBtn:hover {
+  background-color: #008d62;
+  color: whitesmoke;
+  border: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
