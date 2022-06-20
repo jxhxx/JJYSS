@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 // App Components
 import InfoComponent from "./components/InfoComponent";
@@ -25,20 +26,40 @@ function App() {
     );
   }
 
-  // 유효성 체크 함수
-  const NumberCheck = () => {
-    // 숫자가 아닌 모든 문자를 판별하는 정규식
-    const notNumPattern = /[^0-9]/g;
+  
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top',
+    showConfirmButton: false,
+    timer: 1000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
-    // 각 항목의 값이 공백 or 0보다 작거나 같음 or 숫자가 아닌 문자이면 경고창 띄움
-    if (age === '' || age <= 0 || notNumPattern.test(age)) {
-      alert("유효한 값을 입력해주세요.");
+  const warningToast = () => {
+    Toast.fire({
+      icon: 'warning',
+      title: '유효한 값을 입력해주세요.'
+    })
+  } 
+
+  // 필드값 유효성 체크 함수
+  const NumberCheck = () => {
+    // 정수 3자리, 소수점 2자리 제한하는 정규식
+    const pattern = /^(\d{0,3})([.]\d{0,2}?)?$/;
+
+    // 각 항목의 값이 공백 or 0보다 작거나 같음 or 숫자가 아닌 문자이면 alert 
+    if (age === '' || age <= 0 || !pattern.test(age)) {
+      warningToast()
     }
-    else if (height === '' || height <= 0 || notNumPattern.test(height)) {
-      alert("유효한 값을 입력해주세요.");
+    else if (height === '' || height <= 0 || !pattern.test(height)) {
+      warningToast();
     }
-    else if (weight === '' || weight <= 0 || notNumPattern.test(weight)) {
-      alert("유효한 값을 입력해주세요.");
+    else if (weight === '' || weight <= 0 || !pattern.test(weight)) {
+      warningToast();
     }
     else {
       setResultUI(!resultUI);
@@ -50,6 +71,9 @@ function App() {
       <div className="container">
         <div className="title-nav">
           <h1>건강 지킴이</h1>
+          <span>
+            성별∙연령 구분에 따른 신체질량지수 
+            BMI(Body Mass Index)와 기초대사량을 측정해보세요.</span>
         </div>
         {/* 정보 입력 부분*/}
         <InfoComponent
